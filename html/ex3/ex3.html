@@ -4,30 +4,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <link rel="stylesheet" type="text/css" href="../celulas.css" />
 <script src="../celulas.js" language="javascript" type="text/javascript"></script>
-<script language="javascript" type="text/javascript">
-	correto = false;
-	mf = "";
-
-	function init () { 
-		mf = document.getElementById('myform');
-		for (i = 0; i < 5; i++) mf.opt[i].checked = 0;
-		play ("../sound/exerc2");
-	}
-	function opt_chk () {
-		if (mf.opt[3].checked) {	
-			correto = true;
-			play ("../sound/acexerc2");
-		} else {
-			correto = false;
-			play ("");
-		}
-	}
-	function check (n) {
-		for (i = 0; i < 5; i++) mf.opt[i].checked = 0;
-		mf.opt[n].checked = 1;
-		opt_chk ();
-	}		
-</script>
+<script language="javascript" type="text/javascript" src="ex3.js"></script>
 </head>
 
 <body onLoad="init()">

@@ -4,50 +4,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <link rel="stylesheet" type="text/css" href="../celulas.css" />
 <script src="../celulas.js" language="javascript" type="text/javascript"></script>
-<script language="javascript" type="text/javascript">
-	set = new vetor(4);
-	opt = 0;
-	correto = false;
-
-	function vetor (n) {
-		for (i = 1; i <= n; i++) this[i] = 0;
-	}
-
-	function org_click (n) {
-		if (opt != 0) document.getElementById('org' + opt).style.background = "url(none)";
-		document.getElementById('org' + n).style.background = "url('../ex2/select.gif')";
-		opt = n;
-	}
-	
-	function bullet_click (n) {
-		if (opt == '0') 
-			alert("Selecione uma organela primeiro!")
-		else {
-			for (i = 1; i < 5; i++) if (set[i] == n) set[i] = 0;
-			set[opt] = n;
-
-			for (i = 1; i < 5; i++) { 
-				obj = document.getElementById('line' + String(i));
-				y = (i - 1) * 102 + 176;
-				if ((set[i] - i) < 0) y += (set[i] - i) * 102;
-				obj.style.top = y;
-				obj.src = (set[i] == 0)? "../ex1/blank.gif" : "../ex2/arrow" + String(set[i] - i + 4) + ".gif";
-			}
-			
-			with (document) {
-				if (set[1] == 2 && set[2] == 1 && set[3] == 3 && set[4] == 4) {
-					getElementById('org' + opt).style.background = "url(none)";
-					play ("../sound/acexerc2");
-					correto = true;
-				} else correto = false;
-			}
-		}
-	}
-	
-	function init () {
-		play ("../sound/exerc1");
-	}
-</script>
+<script language="javascript" type="text/javascript" src="ex4.js"></script>
 </head>
 
 <body onLoad="init()">
@@ -59,7 +16,7 @@ Associe as organelas com suas respectivas fun&ccedil;&otilde;es celulares:<br>
 <img id="line2" src="../ex1/blank.gif" style="position: absolute; left: 203px; z-index: 1" />
 <img id="line3" src="../ex1/blank.gif" style="position: absolute; left: 203px; z-index: 1" />
 <img id="line4" src="../ex1/blank.gif" style="position: absolute; left: 203px; z-index: 1" />
-			
+
 <table cellpadding="1" cellspacing="2" style="position: absolute; left: 93px; top: 130px;">
   <tr align="center" height="100px">
     <td width="100px" id="org1"><img src="ribossomo.gif" title="Ribossomo" onClick="org_click('1')" width="39" height="55" /></td>

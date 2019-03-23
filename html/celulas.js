@@ -2,13 +2,13 @@ isMSIE = (navigator.appName == "Microsoft Internet Explorer");
 
 function play (arquivo) {
 	if (isMSIE) {
-		document.getElementById('sound').innerHTML = 
+		document.getElementById('sound').innerHTML =
 			"<object type='video/x-ms-wmv' data='" + arquivo + ".mp3'>"
 			+ "<param name='src' value='" + arquivo + ".mp3' />"
 			+ "<param name='autostart' value='true' />"
 			+ "</object>";
 	} else {
-		document.getElementById('sound').innerHTML = 
+		document.getElementById('sound').innerHTML =
 			"<object type='audio/mpeg' data='" + arquivo + ".mp3'>"
 			+ "<param name='url' value='" + arquivo + ".mp3' />"
 			+ "<param name='src' value='" + arquivo + ".mp3' />"
@@ -63,7 +63,7 @@ function org_wnd (org_name) {
 
 function vid_click () {
 	play ("../sound/" + org)
-	org_wnd (org); 
+	org_wnd (org);
 }
 
 function set_org_tip (org_name) { document.getElementById("org_tip").innerHTML = org_desc(org_name) }
