@@ -3,7 +3,6 @@
 <title>C&eacute;lulas Virtuais</title>
 <link rel="stylesheet" type="text/css" href="celulas.css" />
 <script src="celulas.js" language="javascript" type="text/javascript"></script>
-
 <style media="screen" type="text/css">
 	img		{position: absolute; left: 50%; top: 50%}
 	#video	{margin-left: -160px; margin-top: -120px}
@@ -16,7 +15,6 @@
 	#help 	{margin-left: -280px; margin-top: 140px}
 	#sobre 	{margin-left: 175px; margin-top: 144px}
 </style>
-
 </head>
 
 <body onLoad="play('sound/intro')">
@@ -26,13 +24,13 @@
 <img id="bl" src="celulabg.gif" width="255px" height="168px" />
 <img id="br" src="celulabg.gif" width="255px" height="168px" />
 <img id="know" class="m_out" src="know.gif" width="177px" height="72px" onMouseOver="this.className='m_over'"
-onmouseout="this.className='m_out'" onClick="document.location =  window.location.host+'/know/select.html'"/>
+onmouseout="this.className='m_out'" onClick="window.open('know/select.html', '', 'width=790px,height=600px')" />
 <img id="test" class="m_out" src="test.gif" width="174px" height="38px" onMouseOver="this.className='m_over'" 
-onmouseout="this.className='m_out'" onClick="document.location(window.location+'ex1/ex1.html', '', 'width=790px,height=600px')" />
+onmouseout="this.className='m_out'" onClick="window.open('ex1/ex1.html', '', 'width=790px,height=600px')" />
 <img id="help" class="m_out" src="help.gif" width="105px" height="45px" onMouseOver="this.className='m_over'" 
-onmouseout="this.className='m_out'" onClick="document.location(window.location+'help.html', '', 'width=710px,height=550px,scrollbars')" />
+onmouseout="this.className='m_out'" onClick="window.open('help.html', '', 'width=710px,height=550px,scrollbars')" />
 <img id="sobre" class="m_out" src="sobre.gif" width="105px" height="36px" onMouseOver="this.className='m_over'" 
-onmouseout="this.className='m_out'" onClick="document.location(window.location+'sobre.html', '', 'width=710px,height=550px')" />
+onmouseout="this.className='m_out'" onClick="window.open('sobre.html', '', 'width=710px,height=550px')" />
 <div id="sound"></div>
 </body>
 </html>
