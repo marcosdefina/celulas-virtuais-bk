@@ -1,0 +1,22 @@
+Células Virtuais
+================
+
+Para instalar a versão Windows, vá em Meu Computador, 
+execute "instalar.exe" que estará dentro da unidade de CD-ROM
+(Procure por "Celulas").
+
+Para abrir a versão hipertexto, vá em Meu Computador e dê um
+clique duplo em "index.html" que estará também, dentro da
+unidade de CD-ROM.
+
+A versão Windows necessita de no mínimo a seguinte configuração:
+Pentium MMX 233, 32Mb RAM, Drive de CD-ROM 32X,
+15Mb de espaço livre em disco, Kit multimídia com caixas
+amplificadoras e Windows 95.
+
+A versão hipertexto necessita de um computador com CD-ROM,
+Kit Multimídia e um navegador compatível com o Microsoft
+Internet Explorer ou com o Netscape Communicator (como
+o Mozilla Firefox), com suporte a Javascript Ativado.
+
+Leia o arquivo Licença.pdf para informações sobre a licença.

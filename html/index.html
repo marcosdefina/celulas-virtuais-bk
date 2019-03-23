@@ -1,0 +1,36 @@
+<head>
+<meta http-equiv="imagetoolbar" content="no" />
+<title>C&eacute;lulas Virtuais</title>
+<link rel="stylesheet" type="text/css" href="celulas.css" />
+<script src="celulas.js" language="javascript" type="text/javascript"></script>
+<style media="screen" type="text/css">
+	img		{position: absolute; left: 50%; top: 50%}
+	#video	{margin-left: -160px; margin-top: -120px}
+	#tl		{margin-left: -355px; margin-top: -271px}
+	#tr 	{margin-left: 100px; margin-top: -271px}
+	#bl 	{margin-left: -355px; margin-top: 80px}
+	#br 	{margin-left: 100px; margin-top: 80px}
+	#know 	{margin-left: -316px; margin-top: -235px}
+	#test	{margin-left: 141px; margin-top: -218px}
+	#help 	{margin-left: -280px; margin-top: 140px}
+	#sobre 	{margin-left: 175px; margin-top: 144px}
+</style>
+</head>
+
+<body onLoad="play('sound/intro')">
+<img id="video" src="video/intro.gif" width="320px" height="240px" />
+<img id="tl" src="celulabg.gif" width="255px" height="168px" />
+<img id="tr" src="celulabg.gif" width="255px" height="168px" />
+<img id="bl" src="celulabg.gif" width="255px" height="168px" />
+<img id="br" src="celulabg.gif" width="255px" height="168px" />
+<img id="know" class="m_out" src="know.gif" width="177px" height="72px" onMouseOver="this.className='m_over'"
+onmouseout="this.className='m_out'" onClick="window.open('know/select.html', '', 'width=790px,height=600px')" />
+<img id="test" class="m_out" src="test.gif" width="174px" height="38px" onMouseOver="this.className='m_over'" 
+onmouseout="this.className='m_out'" onClick="window.open('ex1/ex1.html', '', 'width=790px,height=600px')" />
+<img id="help" class="m_out" src="help.gif" width="105px" height="45px" onMouseOver="this.className='m_over'" 
+onmouseout="this.className='m_out'" onClick="window.open('help.html', '', 'width=710px,height=550px,scrollbars')" />
+<img id="sobre" class="m_out" src="sobre.gif" width="105px" height="36px" onMouseOver="this.className='m_over'" 
+onmouseout="this.className='m_out'" onClick="window.open('sobre.html', '', 'width=710px,height=550px')" />
+<div id="sound"></div>
+</body>
+</html>

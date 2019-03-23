@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>C&eacute;lulas Virtuais :: Exerc&iacute;cio 3</title>
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" type="text/css" href="../celulas.css" />
+<script src="../celulas.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+	correto = false;
+	mf = "";
+
+	function init () { 
+		mf = document.getElementById('myform');
+		for (i = 0; i < 5; i++) mf.opt[i].checked = 0;
+		play ("../sound/exerc2");
+	}
+	function opt_chk () {
+		if (mf.opt[3].checked) {	
+			correto = true;
+			play ("../sound/acexerc2");
+		} else {
+			correto = false;
+			play ("");
+		}
+	}
+	function check (n) {
+		for (i = 0; i < 5; i++) mf.opt[i].checked = 0;
+		mf.opt[n].checked = 1;
+		opt_chk ();
+	}		
+</script>
+</head>
+
+<body onLoad="init()">
+<div align="center"><span class="titulo">Exerc&iacute;cio 3</span><br/>
+Sobre o ribossomo, qual das alternativas abaixo &eacute; incorreta?
+<br/><br/><br/>
+<form id="myform">
+<table width="700px" cellpadding="1px" cellspacing="30px" align="center">
+	<tr><td><input name="opt" type="radio" onClick="opt_chk()" /> <span class="m_over" onClick="check(0)">O ribossomo &eacute; composto de  RNA e prote&iacute;nas;</span></td></tr>
+	<tr><td><input name="opt" type="radio" onClick="opt_chk()" /> <span class="m_over" onClick="check(1)">O ribossomo possui duas subunidades;</span></td></tr>
+	<tr><td><input name="opt" type="radio" onClick="opt_chk()" /> <span class="m_over" onClick="check(2)">O ribossomo est&aacute; relacionado com a s&iacute;ntese de prote&iacute;nas;</span></td></tr>
+	<tr><td><input name="opt" type="radio" onClick="opt_chk()" /> <span class="m_over" onClick="check(3)">O ribossomo est&aacute; associado &agrave; modifica&ccedil;&atilde;o de prote&iacute;nas;</span></td></tr>
+	<tr><td><input name="opt" type="radio" onClick="opt_chk()" /> <span class="m_over" onClick="check(4)">V&aacute;rios ribossomos podem ser encontrados associados com uma mol&eacute;cula de RNA mensageiro. Esse complexo &eacute; conhecido como poliribossomos.</span></td></tr>
+</table>
+</form>
+</div>
+
+<img id="backButton" src="../know/back.gif" class="m_out" onMouseOver="this.className='m_over'" onMouseOut="this.className='m_out'" onClick="window.open('../ex2/ex2.html', '_self')" title="Volta para o exerc&iacute;cio anterior" />
+<img id="nextButton" src="../know/next.gif" class="m_out" onMouseOver="if (correto) this.className='m_over'" onMouseOut="this.className='m_out'"  onClick="if (correto) window.open('../ex4/ex4.html', '_self')" title="Vai para o pr&oacute;ximo exerc&iacute;cio" />
+<img id="closeButton" src="../know/close.gif" class="m_out" onMouseOver="this.className='m_over'" onMouseOut="this.className='m_out'" onClick="window.close()" title="Fecha"/>
+
+<div id="sound"></div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<html>
+<head>
+<title>C&eacute;lulas Virtuais :: Exerc&iacute;cio 1</title>
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" type="text/css" href="../celulas.css" />
+<script src="../celulas.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+	org_sel = "none";
+	n_org = 9;
+	org_ind = 0;
+	org_cnt = new org_count (0);
+	vid = "";
+	
+	function org_count (n) {
+		this[1] = 1;
+		this[2] = 4;
+		this[3] = 1;
+		this[4] = 1;
+		this[5] = 9;
+		this[6] = 6;
+		this[7] = 1;
+		this[8] = 1;
+		this[9] = 1;
+	}
+	
+	function set_tip () {
+		set_org_tip (org_sel);
+		switch (org_sel) {
+			case "nucleo": org_ind = 1; break;
+			case "mitocondria": org_ind = 2; break;
+			case "rerugoso": org_ind = 3; break;
+			case "golgi": org_ind = 4; break;
+			case "ribossomo": org_ind = 5; break;
+			case "lisossomo": org_ind = 6; break;
+			case "reliso": org_ind = 7; break;
+			case "centriolos": org_ind = 8; break;
+			case "membrana": org_ind = 9; break;
+			default: org_ind = 0; if (n_org != 0) document.getElementById("org_tip").innerHTML = "Escolha uma organela";
+		}
+	}
+
+	function orgclick (orgname, orgnum) {
+		if (org_sel == orgname) {
+			org = document.getElementById(orgname + orgnum);
+			org.src = orgname + orgnum + ".gif";
+			
+			org_cnt[org_ind]--;
+			if (org_cnt[org_ind] == 0) {
+				ico = document.getElementById("ico_" + orgname);
+				ico.className = 'm_out';
+				ico.useMap = '';
+				n_org--;
+				org_sel = "none";
+				
+				if (n_org == 0) { 
+					vid.src = "msg_ok.jpg";
+					play ("../sound/acexerc0");
+				} else
+					vid.src = "msg_select.jpg";
+			}
+			
+			if (orgname == "nucleo" || orgname == "rerugoso") {
+				if (org_cnt[1] == 0 && org_cnt[3] == 0) 
+					document.getElementById("misto").useMap = ""
+				else 
+					document.getElementById("misto").useMap = (org_cnt[1] == "0")? "#rer_map" : "#nucleo_map";		
+			} else 
+				org.useMap = "";
+		} else { 
+			vid.src = (org_sel == "none")? "msg_err1.jpg" : "msg_err2.jpg";
+			org_sel = "none";
+		}
+		set_tip();
+	}
+	
+	function init () {
+		vid = document.getElementById("video");
+		set_tip ();
+		play ("../sound/exerc0");
+	}
+	
+	function set_org (orgname) {
+		org_sel = orgname;
+		document.getElementById('video').src="../video/" + orgname + ".gif";
+		set_tip ();
+	}
+</script>
+</head>
+
+<body onLoad="init()">
+<table width="150px" height="96px" border="0" cellpadding="0" cellspacing="0" style="position: absolute; left: 0; top: 502px;">
+<tr><td id="org_tip" align="center" valign="middle"></td></tr></table>
+
+<div align="center" style="width: 525px"><span class="titulo">Exerc&iacute;cio 1</span><br/>
+Clique no &iacute;cone da organela &agrave; direita e, depois, clique no seu local correspondente na c&eacute;lula abaixo:
+</div>
+
+<img src="celula.gif" style="position: absolute; left: 5px; top: 123px" width="620" height="475" usemap="#celula">
+<img id="video" src="msg_select.jpg" style="position: absolute; left: 526px; top: 5px" width="256" height="192">
+
+<map name="membrana_map"><area onClick="orgclick('membrana','')" href="#" shape="poly" coords="13,115,26,115,29,114,31,114,35,107,37,105,37,105,46,97,46,97,46,97,54,87,54,87,60,82,67,82,68,73,68,73,74,70,74,70,74,70,74,64,74,64,79,67,80,62,86,59,86,59,98,54,98,54,98,54,103,53,103,53,106,52,105,50,114,49,129,48,124,47,132,45,132,45,147,43,147,43,156,41,162,37,172,37,172,37,219,37,219,37,229,37,226,39,232,40,232,40,246,40,246,40,246,40,246,43,246,43,246,43,261,43,261,43,264,51,275,49,282,49,282,49,282,55,282,55,282,55,296,55,296,55,296,55,315,62,315,62,315,62,327,61,327,61,327,61,327,64,327,64,337,64,334,66,341,69,344,70,348,70,351,70,351,70,351,73,351,73,351,73,360,73,360,73,360,73,360,76,360,76,360,76,372,76,372,76,372,76,384,79,384,79,384,79,384,82,384,82,384,82,393,82,393,82,393,82,396,88,396,88,396,88,411,94,411,94,411,94,411,97,411,97,411,97,429,103,429,103,431,108,439,111,444,112,444,112,447,118,447,118,447,118,453,118,453,118,453,118,453,121,453,121,453,121,459,121,459,121,459,121,459,124,459,124,459,124,468,124,468,124,468,124,468,130,468,130,468,130,474,130,474,130,474,130,474,133,474,133,474,133,480,133,480,133,480,133,488,145,488,145,488,145,500,148,500,148,502,154,510,162,516,164,516,164,516,169,516,169,516,169,522,175,522,175,526,176,527,177,528,181,528,181,537,184,537,184,537,184,540,187,540,187,540,194,543,200,547,205,552,210,557,213,558,220,558,220,564,220,564,220,564,220,564,223,564,223,564,223,570,223,570,223,570,223,570,232,570,232,570,232,579,238,579,238,579,238,582,256,582,256,582,256,581,271,581,271,581,271,582,289,582,289,582,289,585,289,585,289,585,289,585,295,585,295,582,293,578,292,576,296,576,296,547,297,547,297,542,302,541,301,535,302,535,302,529,305,529,305,529,305,510,305,510,305,510,305,510,308,510,308,510,308,498,308,498,308,498,308,498,311,498,311,498,311,492,311,492,311,492,311,489,314,489,314,489,314,489,320,489,320,489,320,485,320,485,320,485,320,481,324,481,324,481,324,470,331,470,331,468,336,465,338,461,341,461,341,438,360,438,360,433,365,434,368,426,368,426,368,423,374,423,374,423,374,411,374,411,374,411,374,411,377,411,377,411,377,405,377,405,377,405,384,403,385,396,386,396,386,396,389,396,389,389,389,382,389,375,390,370,392,365,396,355,396,355,396,327,392,327,392,324,391,320,390,317,390,314,390,311,391,308,392,308,392,308,389,308,389,308,389,284,389,284,389,284,389,269,383,269,383,269,383,269,380,269,380,269,380,263,380,263,380,263,380,263,377,263,377,263,377,254,377,254,377,254,377,254,374,254,374,243,373,244,364,237,361,234,360,228,360,225,360,225,360,206,359,206,359,206,359,203,356,203,356,202,352,201,351,197,350,197,350,198,347,198,347,192,345,190,341,188,335,188,335,182,335,182,335,182,335,182,329,182,329,182,329,176,326,176,326,175,320,170,313,164,311,164,301,159,299,153,292,149,286,150,284,148,279,146,274,143,272,143,266,143,266,137,266,137,266,137,266,137,260,137,260,137,260,125,251,125,251,125,251,125,242,125,242,125,242,119,236,119,236,119,236,113,236,113,236,113,236,113,230,113,230,113,230,110,227,110,227,110,227,104,227,104,227,104,227,95,215,95,215,95,215,86,215,86,215,86,215,86,212,86,212,86,212,74,212,74,212,74,212,71,209,71,209,71,209,71,205,71,205,71,205,62,206,62,206,62,206,62,203,62,203,62,203,56,203,56,203,56,203,47,188,47,188,47,188,41,188,41,188,41,181,43,179,35,179,35,179,35,173,35,173,35,173,32,173,32,1731,32,173,32,164,32,164,32,164,29,164,29,164,29,164,29,152,29,152,29,152,26,152,26,152,26,136,25,133,29,117,29,117,8,117,8,117,8,117,4,126,4,126,3,130,0,155,1,159,1,159,4,169,4,169,4,169,7,185,7,185,7,185,11,198,11,198,11,198,13,206,13,206,13,206,16,213,16,213,16,213,27,250,27,250,27,250,39,285,39,285,41,292,44,306,48,311,48,311,71,337,71,337,71,337,89,358,89,358,89,358,123,373,123,373,123,373,141,388,141,388,141,388,187,417,187,417,208,430,193,425,216,443,227,451,233,454,245,460,245,460,259,467,259,467,259,467,273,469,273,469,273,469,301,472,301,472,301,472,311,472,311,472,311,472,338,475,338,475,351,475,369,469,382,465,382,465,423,449,423,449,423,449,443,437,443,437,459,427,466,422,480,409,480,409,489,402,489,402,489,402,504,383,504,383,504,383,526,355,526,355,530,350,534,345,536,340,536,340,581,324,581,324,586,322,599,318,601,315,604,312,610,302,611,298,613,293,612,289,617,286,617,286,620,269,620,269,620,269,617,254,617,254,610,251,611,246,611,239,611,239,609,242,609,242,604,232,605,229,605,218,600,215,599,212,599,206,599,206,596,206,596,206,594,192,577,180,568,169,568,169,552,153,552,153,552,153,521,126,521,126,521,126,509,116,509,116,509,116,471,93,471,93,471,93,441,75,441,75,441,75,414,64,414,64,414,64,385,52,385,52,385,52,371,46,371,46,371,46,351,40,351,40,351,40,325,33,325,33,325,33,303,28,303,28,303,28,276,18,276,18,276,18,262,13,262,13,262,13,244,6,244,6,236,4,211,1,202,1,202,1,190,1,190,1,190,1,180,0,180,0,172,0,165,1,157,3,157,3,148,5,148,5,133,9,107,18,94,25,94,25,77,37,77,37,77,37,62,47,62,47,62,47,40,71,40,71,29,84,16,99,10,115"></map>
+<img id="membrana" src="blank.gif" usemap="#membrana_map" height="475" width="620" style="position: absolute; left: 5px; top: 123px;">
+
+<img id="nucleo" src="blank.gif" height="118" width="117" style="position: absolute; left: 98px; top: 202px">
+<img id="rerugoso" src="blank.gif" height="93" width="127" style="position: absolute; left: 112px; top: 226px">
+
+<map name="nucleo_map">
+<area href="#" onClick="orgclick('nucleo','')" shape="poly" coords="91,89,98,83,98,83,99,80,99,80,102,80,103,78,103,78,105,78,111,69,118,69,117,57,117,53,114,42,112,38,109,32,105,31,107,25,101,16,99,16,90,11,84,7,78,3,71,1,71,1,51,0,51,0,48,1,46,2,43,3,38,5,30,6,25,9,18,14,13,20,9,27,6,31,3,36,2,41,1,44,0,54,0,57,0,63,1,73,4,79,4,79,7,85,7,85,8,88,9,92,11,95,13,96,14,97,16,99,18,100,20,103,22,104,26,105,31,101,35,101,38,100,43,101,46,101,57,101,51,99,59,98,63,97,65,97,73,94,79,92,84,88,91,89">
+<area href="#" onClick="orgclick('nucleo','')" shape="poly" coords="52,118,64,118,69,117,74,116,74,115,82,114,75,110,55,113,48,116">
+</map>
+<map name="rer_map">
+<area href="#" onClick="orgclick('rerugoso','')" shape="poly" coords="103,78,103,78,102,80,99,80,99,80,98,83,94,85,93,86,91,89,83,87,75,93,68,96,68,96,57,98,57,98,54,99,53,100,50,100,45,101,38,99,34,100,25,103,24,105,18,109,18,109,15,107,15,107,15,107,14,114,14,114,22,116,39,117,47,116,50,116,54,113,66,112,66,112,81,113,81,113,84,113,95,108,98,107,98,107,104,103,104,103,115,96,110,98,118,90,118,90,130,78,130,78,137,72,143,71,140,60,140,60,136,64,136,64,135,54,139,58,135,43,135,41,135,40,134,38,130,32,123,32,119,26,119,26,114,25,114,25,113,31,118,34,122,38,122,38,119,39,119,39,119,39,109,27,109,27,109,27,111,24,111,24,108,25,104,26,106,30,107,33,119,48,120,52,121,63,108,71,105,78">
+</map>
+<map name="nucleo_rer_map">
+<area href="#" onClick="orgclick('nucleo','')" shape="poly" coords="91,89,98,83,98,83,99,80,99,80,102,80,103,78,103,78,105,78,111,69,118,69,117,57,117,53,114,42,112,38,109,32,105,31,107,25,101,16,99,16,90,11,84,7,78,3,71,1,71,1,51,0,51,0,48,1,46,2,43,3,38,5,30,6,25,9,18,14,13,20,9,27,6,31,3,36,2,41,1,44,0,54,0,57,0,63,1,73,4,79,4,79,7,85,7,85,8,88,9,92,11,95,13,96,14,97,16,99,18,100,20,103,22,104,26,105,31,101,35,101,38,100,43,101,46,101,57,101,51,99,59,98,63,97,65,97,73,94,79,92,84,88,91,89">
+<area href="#" onClick="orgclick('nucleo','')" shape="poly" coords="52,118,64,118,69,117,74,116,74,115,82,114,75,110,55,113,48,116">
+<area href="#" onClick="orgclick('rerugoso','')" shape="poly" coords="103,78,103,78,102,80,99,80,99,80,98,83,94,85,93,86,91,89,83,87,75,93,68,96,68,96,57,98,57,98,54,99,53,100,50,100,45,101,38,99,34,100,25,103,24,105,18,109,18,109,15,107,15,107,15,107,14,114,14,114,22,116,39,117,47,116,50,116,54,113,66,112,66,112,81,113,81,113,84,113,95,108,98,107,98,107,104,103,104,103,115,96,110,98,118,90,118,90,130,78,130,78,137,72,143,71,140,60,140,60,136,64,136,64,135,54,139,58,135,43,135,41,135,40,134,38,130,32,123,32,119,26,119,26,114,25,114,25,113,31,118,34,122,38,122,38,119,39,119,39,119,39,109,27,109,27,109,27,111,24,111,24,108,25,104,26,106,30,107,33,119,48,120,52,121,63,108,71,105,78">
+</map>
+<img id="misto" src="blank.gif" usemap="#nucleo_rer_map" height="118" width="141" style="position: absolute; left: 98px; top: 202px">
+
+<map name="mito1_map"><area href="#" onClick="orgclick('mitocondria','1')" shape="poly" coords="25,8,22,7,22,7,22,7,23,5,23,5,19,3,14,-1,9,0,5,1,3,7,2,10,-1,19,0,25,4,34,5,37,6,39,8,42,10,43,11,45,13,46,27,54,32,37,31,26,30,23,30,19,29,16,27,13,25,12,25,8"></map>
+<img id="mitocondria1" src="blank.gif" usemap="#mito1_map" height="48" width="31" style="position: absolute; left: 152px; top: 326px">
+
+<map name="mito2_map"><area href="#" onClick="orgclick('mitocondria','2')" shape="poly" coords="-2,6,-1,14,5,21,13,29,24,34,35,34,37,34,45,33,46,31,50,28,48,16,44,12,35,2,20,-3,7,1"></map>
+<img id="mitocondria2" src="blank.gif" usemap="#mito2_map" height="34" width="48" style="position: absolute; left: 326px; top: 427px">
+
+<map name="mito3_map"><area href="#" onClick="orgclick('mitocondria','3')" shape="poly" coords="4,3,2,5,1,9,-3,23,13,32,22,27,31,22,28,5,19,2,19,2,7,0,7,0"></map>
+<img id="mitocondria3" src="blank.gif" usemap="#mito3_map" height="28" width="28" style="position: absolute; left: 161px; top: 174px">
+
+<map name="mito4_map"><area href="#" onClick="orgclick('mitocondria','4')" shape="poly" coords="33,26,39,12,39,12,41,0,29,-1,21,2,13,5,3,14,1,22,-3,37,8,41,20,35,26,32,27,29,33,26"></map>
+<img id="mitocondria4" src="blank.gif" usemap="#mito4_map" height="38" width="39" style="position: absolute; left: 428px; top: 286px">
+
+<map name="golgi_map"><area href="#" onClick="orgclick('golgi','')" shape="poly" coords="52,2,51,3,43,4,42,8,42,11,44,15,46,20,49,23,47,29,43,39,27,43,17,43,12,43,6,40,3,44,-3,51,3,59,10,60,9,62,8,63,8,65,7,75,13,76,21,74,24,73,27,72,29,70,31,69,32,67,33,65,37,75,27,77,35,87,40,93,56,97,55,85,57,87,59,89,60,90,62,91,64,91,66,91,74,90,73,83,72,77,72,77,69,78,69,78,66,68,71,64,79,58,86,54,88,53,96,53,96,53,107,54,107,54,107,54,107,60,107,60,108,68,119,63,115,55,115,53,114,53,112,52,114,48,114,47,114,42,111,41,111,40,110,38,104,32,109,30,106,24,104,19,94,16,89,20,84,24,87,28,78,33,76,28,72,29,67,29,72,20,83,19,82,10,80,0,66,-1,61,1,59,3,58,6,57,9"></map>
+<img id="golgi" src="blank.gif" usemap="#golgi_map" height="93" width="116" style="position: absolute; left: 242px; top: 267px">
+
+<map name="rel_map"><area href="#" onClick="orgclick('reliso','')" shape="poly" coords="16,37,5,33,2,34,-1,36,2,46,4,47,7,49,13,47,16,46,16,50,17,60,15,63,13,67,8,69,9,72,10,75,14,75,16,73,20,71,21,67,21,63,21,63,42,61,42,61,44,64,45,62,48,63,50,64,52,65,54,65,60,65,58,55,57,52,62,50,66,49,68,44,71,39,71,33,64,34,64,34,64,26,64,26,68,25,74,22,75,19,76,17,75,15,75,13,75,13,63,19,63,19,63,19,53,17,53,17,53,9,54,9,51,1,47,1,35,-1,33,2,33,1,27,18,25,19,24,21,23,21,21,21,15,21,10,18,9,22,7,28,18,30,20,37"></map>
+<img id="reliso" src="blank.gif" usemap="#rel_map" height="75" width="76" style="position: absolute; left: 245px; top: 187px">
+
+<map name="centri_map"><area href="#" onClick="orgclick('centriolos','')" shape="poly" coords="7,24,17,15,17,15,16,21,21,26,24,30,28,34,32,44,37,35,37,33,38,32,38,31,38,31,24,13,24,13,24,13,20,13,20,13,20,13,22,7,22,7,24,1,19,-1,15,1,13,2,11,4,10,6,6,10,-2,15,1,21,3,23,4,24,7,24"></map>
+<img id="centriolos" src="blank.gif" usemap="#centri_map" height="39" width="38" style="position: absolute; left: 70px; top: 285px">
+
+<map name="liso1_map"><area href="#" onClick="orgclick('lisossomo','1')" shape="poly" coords="8,2,2,6,1,14,-1,23,4,33,14,32,29,30,34,2,15,1"></map>
+<img id="lisossomo1" src="blank.gif" usemap="#liso1_map" height="32" width="28" style="position: absolute; left: 361px; top: 224px">
+
+<map name="liso2_map"><area href="#" onClick="orgclick('lisossomo','2')" shape="poly" coords="4,4,0,10,0,16,0,24,9,29,16,26,23,23,24,18,24,11,24,8,24,5,22,3,19,-1,13,0,9,1"></map>
+<img id="lisossomo2" src="blank.gif" usemap="#liso2_map" height="27" width="24" style="position: absolute; left: 249px; top: 401px">
+
+<map name="liso3_map"><area href="#" onClick="orgclick('lisossomo','3')" shape="poly" coords="4,2,3,2,2,4,-1,7,-1,15,2,18,6,22,14,23,19,22,25,19,26,9,22,4,19,0,11,0,6,1"></map>
+<img id="lisossomo3" src="blank.gif" usemap="#liso3_map" height="22" width="24" style="position: absolute; left: 429px; top: 413px">
+
+<map name="liso4_map"><area href="#" onClick="orgclick('lisossomo','4')" shape="poly" coords="5,3,2,6,1,9,0,11,0,14,0,16,0,18,0,20,1,22,3,27,11,28,15,26,22,22,26,6,17,1,15,0,10,0,7,0"></map>
+<img id="lisossomo4" src="blank.gif" usemap="#liso4_map" height="27" width="22" style="position: absolute; left: 357px; top: 360px">
+
+<map name="liso5_map"><area href="#" onClick="orgclick('lisossomo','5')" shape="poly" coords="20,20,23,16,23,14,24,11,23,9,22,7,17,-5,-1,0,0,10,1,12,2,14,3,16,4,18,6,21,8,22,8,22,19,22,19,22"></map>
+<img id="lisossomo5" src="blank.gif" usemap="#liso5_map" height="22" width="24" style="position: absolute; left: 389px; top: 327px">
+
+<map name="liso6_map"><area href="#" onClick="orgclick('lisossomo','6')" shape="poly" coords="2,5,0,10,0,16,1,24,10,29,17,25,23,21,26,8,20,2,16,-1,10,-1,6,1"></map>
+<img id="lisossomo6" src="blank.gif" usemap="#liso6_map" height="27" width="23" style="position: absolute; left: 445px; top: 368px">
+
+<map name="ribo1_map"><area href="#" onClick="orgclick('ribossomo','1')" shape="poly" coords="13,3,12,2,10,1,9,1,7,1,6,1,-6,4,4,15,10,9,10,9,14,4,14,4"></map>
+<img id="ribossomo1" src="blank.gif" usemap="#ribo1_map" height="11" width="14" style="position: absolute; left: 199px; top: 186px">
+
+<map name="ribo2_map"><area href="#" onClick="orgclick('ribossomo','2')" shape="poly" coords="0,5,0,7,1,8,3,11,12,11,14,8,16,6,14,0,8,1,5,2,5,2,0,3"></map>
+<img id="ribossomo2" src="blank.gif" usemap="#ribo2_map" height="10" width="16" style="position: absolute; left: 69px; top: 218px">
+
+<map name="ribo3_map"><area href="#" onClick="orgclick('ribossomo','3')" shape="poly" coords="16,7,16,1,16,1,13,1,5,0,3,1,-1,3,0,9,4,10,8,11,13,8,16,7.0"></map>
+<img id="ribossomo3" src="blank.gif" usemap="#ribo3_map" height="11" width="16" style="position: absolute; left: 117px; top: 316px">
+
+<map name="ribo4_map"><area href="#" onClick="orgclick('ribossomo','4')" shape="poly" coords="4,3,1,5,1,8,0,13,5,14,9,12,13,11,16,-2,6,1"></map>
+<img id="ribossomo4" src="blank.gif" usemap="#ribo4_map" height="14" width="13" style="position: absolute; left: 185px; top: 309px">
+
+<map name="ribo5_map"><area href="#" onClick="orgclick('ribossomo','5')" shape="poly" coords="7,1,2,1,1,5,0,8,2,12,6,12,11,12,23,1,11,0"></map>
+<img id="ribossomo5" src="blank.gif" usemap="#ribo5_map" height="12" width="17" style="position: absolute; left: 235px; top: 374px">
+
+<map name="ribo6_map"><area href="#" onClick="orgclick('ribossomo','6')" shape="poly" coords="1,4,-2,11,6,11,6,11,16,8,16,8,14,3,8,2,3,0"></map>
+<img id="ribossomo6" src="blank.gif" usemap="#ribo6_map" height="12" width="16" style="position: absolute; left: 357px; top: 199px">
+
+<map name="ribo7_map"><area href="#" onClick="orgclick('ribossomo','7')" shape="poly" coords="1,0,0,9,0,9,0,17,11,16,12,10,12,8,11,6,10,4,9,3,8,1,7,1,5,0,3,0,1,0"></map>
+<img id="ribossomo7" src="blank.gif" usemap="#ribo7_map" height="15" width="13" style="position: absolute; left: 352px; top: 400px">
+
+<map name="ribo8_map"><area href="#" onClick="orgclick('ribossomo','8')" shape="poly" coords="-2,6,0,15,6,12,12,9,12,-2,3,1"></map>
+<img id="ribossomo8" src="blank.gif" usemap="#ribo8_map" height="14" width="10" style="position: absolute; left: 439px; top: 255px">
+
+<map name="ribo9_map"><area href="#" onClick="orgclick('ribossomo','9')" shape="poly" coords="7,1,2,1,1,3,-2,6,7,10,10,10,14,10,18,6,15,3,13,0,11,1,9,1"></map>
+<img id="ribossomo9" src="blank.gif" usemap="#ribo9_map" height="11" width="17" style="position: absolute; left: 499px; top: 347px">
+
+<!-- ICONES ===================================================================================================== -->
+
+<map name="ico_nucleo_map"><area href="#" OnClick="set_org('nucleo')" title="N&uacute;cleo" shape="poly" coords="3,9,1,13,1,13,1,13,1,26,1,26,9,34,11,39,24,39,31,39,37,38,43,33,57,19,44,0,27,0,14,0,13,2,3,9"></map>
+<img id="ico_nucleo" src="ico_nucleo.gif" style="position: absolute; left: 643px; top: 204px" height="39" width="49" usemap="#ico_nucleo_map">
+
+<map name="ico_rerugoso_map"><area href="#" OnClick="set_org('rerugoso')" title="Ret&iacute;culo Endoplasm&aacute;tico Rugoso (ou Granular)" shape="poly" coords="11,2,14,6,14,6,14,6,20,6,20,6,20,6,20,8,20,8,20,8,11,9,11,9,11,9,16,12,16,12,16,12,10,13,10,13,10,13,15,18,15,18,15,18,5,19,5,19,9,22,10,22,15,21,15,21,18,24,18,24,18,24,0,26,0,26,4,29,7,29,11,29,11,29,8,33,8,33,21,34,43,36,55,32,55,32,52,31,52,31,52,31,63,28,63,28,63,28,55,26,55,26,55,26,55,21,55,21,55,21,51,20,51,20,56,18,65,20,68,15,59,13,58,12,48,14,48,14,56,10,56,10,56,10,47,8,47,8,47,8,46,4,46,4,46,4,49,3,49,3,45,0,43,1,39,1,31,0,19,0,11,2"></map>
+<img id="ico_rerugoso" src="ico_rugoso.gif" style="position: absolute; left: 633px; top: 333px" height="34" width="68" usemap="#ico_rerugoso_map">
+
+<map name="ico_mitocondria_map"><area href="#" OnClick="set_org('mitocondria')" title="Mitoc&ocirc;ndria" shape="poly" coords="42,26,49,27,49,27,50,25,52,26,55,25,59,23,68,18,67,12,65,6,57,3,52,2,40,-2,32,0,20,2,13,3,6,5,2,11,-2,17,3,21,8,23,15,28,24,28,33,28,36,28,39,29,42,26"></map>
+<img id="ico_mitocondria" src="ico_mitocondria.gif" style="position: absolute; left: 634px; top: 274px" height="28" width="67" usemap="#ico_mitocondria_map">
+
+<map name="ico_golgi_map"><area href="#" OnClick="set_org('golgi')" title="Complexo de Golgi" shape="poly" coords="15,0,16,5,16,5,16,5,10,9,10,9,10,9,11,5,11,5,6,2,2,3,3,10,3,10,8,8,8,8,7,9,7,11,7,13,7,18,12,19,16,17,16,17,18,21,18,21,12,20,6,19,7,27,6,27,5,26,4,26,-4,27,3,38,8,32,8,32,9,27,9,27,10,29,12,37,13,38,15,39,18,37,14,34,14,34,14,32,14,32,20,30,27,22,34,27,35,28,36,29,37,31,38,34,36,34,38,40,38,40,43,39,43,39,43,39,40,32,40,32,40,32,43,33,43,33,43,33,44,29,44,29,47,32,45,34,44,37,49,38,50,37,54,35,54,35,49,31,49,31,51,23,51,19,41,21,41,21,42,17,42,17,48,17,51,17,50,10,50,10,57,9,57,9,54,2,52,6,47,5,42,4,43,2,36,1,37,4,37,4,40,5,33,11,24,15,18,5,23,3,20,0,15,0"></map>
+<img id="ico_golgi" src="ico_golgi.gif" style="position: absolute; left: 638px; top: 395px" height="40" width="57" usemap="#ico_golgi_map">
+
+<map name="ico_ribossomo_map"><area href="#" OnClick="set_org('ribossomo')" title="Ribossomo" shape="poly" coords="9,30,8,32,7,34,2,52,39,53,34,34,33,31,32,30,30,28,40,27,42,17,38,9,34,1,27,0,19,0,12,0,6,3,2,9,-2,17,1,27,11,28"></map>
+<img id="ico_ribossomo" src="ico_ribossomo.gif" style="position: absolute; left: 731px; top: 203px" height="48" width="40" usemap="#ico_ribossomo_map">
+
+<map name="ico_lisossomo_map"><area href="#" OnClick="set_org('lisossomo')" title="Lisossomo" shape="poly" coords="-3,7,-5,30,11,40,15,42,19,42,24,42,30,42,34,42,40,38,53,29,53,11,39,3,33,0,25,-1,18,1"></map>
+<img id="ico_lisossomo" src="ico_lisossomo.gif" style="position: absolute; left: 726px; top: 267px" height="42" width="50" usemap="#ico_lisossomo_map">
+
+<map name="ico_reliso_map"><area href="#" OnClick="set_org('reliso')" title="Ret&iacute;culo Endoplasm&aacute;tico Liso" shape="poly" coords="24,2,25,4,25,4,14,5,9,10,0,16,0,16,0,19,0,19,0,19,10,18,10,18,10,18,8,22,8,22,8,22,15,23,15,23,15,23,14,36,14,36,18,37,21,37,22,42,27,43,29,44,32,39,36,43,37,43,42,42,43,34,49,30,56,31,61,32,63,35,67,30,67,30,56,25,56,25,56,25,57,21,57,21,57,21,63,20,63,20,62,18,61,16,62,13,63,11,66,10,66,8,66,2,56,8,54,9,54,9,43,4,43,4,43,4,37,0,37,0,37,0,24,2,24,2"></map>
+<img id="ico_reliso" src="ico_reliso.gif" style="position: absolute; left: 716px; top: 330px" height="43" width="67" usemap="#ico_reliso_map">
+
+<map name="ico_centriolos_map"><area href="#" OnClick="set_org('centriolos')" title="Centr&iacute;olos" shape="poly" coords="0,6,0,6,4,11,4,11,0,11,0,11,0,11,0,39,0,39,0,39,11,39,11,39,11,39,11,11,11,11,11,11,6,11,6,11,6,11,6,9,6,9,6,9,34,9,34,9,34,9,34,2,34,2,34,2,27,0,27,0,27,0,1,0,1,0"></map>
+<img id="ico_centriolos" src="ico_centriolos.gif" style="position: absolute; left: 740px; top: 395px" height="39" width="35" usemap="#ico_centriolos_map">
+
+<map name="ico_membrana_map"><area href="#" OnClick="set_org('membrana')" title="Membrana Plasm&aacute;tica" shape="poly" coords="35,3,30,2,27,5,18,3,10,5,1,5,0,17,4,10,0,25,0,25,3,35,3,35,3,35,11,35,11,35,11,35,9,41,9,41,12,42,14,43,17,44,24,44,28,41,25,34,30,37,31,41,35,41,40,42,44,37,48,36,48,36,81,36,81,36,81,36,81,14,81,14,81,12,83,7,80,5,78,3,73,5,70,5,66,-1,62,4,57,4,51,4,44,-5,39,4"></map>
+
+<img id="ico_membrana" src="ico_membrana.gif" style="position: absolute; left: 661px; top: 450px" height="44" width="82" usemap="#ico_membrana_map">
+
+<img id="backButton" src="../know/back.gif" class="m_out" />
+<img id="nextButton" src="../know/next.gif" class="m_out" onMouseOver="if (n_org == 0) this.className='m_over'" onMouseOut="this.className='m_out'"  onClick="if (n_org == 0) window.open('../ex2/ex2.html', '_self')" title="Vai para o pr&oacute;ximo exerc&iacute;cio" />
+<img id="closeButton" src="../know/close.gif" class="m_out" onMouseOver="this.className='m_over'" onMouseOut="this.className='m_out'" onClick="window.close()" title="Fecha"/>
+
+<div id="sound"></div>
+</body>
+</html>
