@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { HelpComponent } from './help/help.component';
 import { LearnMenuComponent } from './learn-menu/learn-menu.component';
 import { ExercicesMenuComponent } from './exercices-menu/exercices-menu.component';
+import { Ex1Component } from './ex1/ex1.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ExercicesMenuComponent } from './exercices-menu/exercices-menu.componen
     AboutComponent,
     HelpComponent,
     LearnMenuComponent,
-    ExercicesMenuComponent
+    ExercicesMenuComponent,
+    Ex1Component
   ],
   imports: [
     BrowserModule,
