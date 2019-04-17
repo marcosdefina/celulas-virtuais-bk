@@ -15,7 +15,3 @@
 .uk-navbar-toggle:hover {
   color: rgb(80, 80, 80);
 }
-
-router-outlet {
-  background: url("../assets/images/icons-bg.png")
-}
