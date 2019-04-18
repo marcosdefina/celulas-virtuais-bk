@@ -1,9 +1,24 @@
-<p class="title">SEJA BEM-VINDO(A)!</p>
-<p class="excerpt">Vamos aprender mais sobre citologia?</p>
+<div uk-grid data-uk-grid-margin>
+    <div class="title uk-width-1-1">SEJA BEM-VINDO(A)!</div>
+    <div class="excerpt uk-width-1-1">Vamos aprender mais sobre citologia?</div>
+</div>
 <div class="menu-transform">
     <img class="centered-image" src="/assets/images/microorganism.svg" />
-    <card id="learn" cardTitle="Aprender" cardLink="/learn/menu"> What happens here?</card>
-    <card id="exercises" cardTitle="Exercicios" cardLink="/exercices/menu"></card>
-    <card id="help" cardTitle="Ajuda" cardLink="/help"></card>
-    <card id="about" cardTitle="Sobre" cardLink="/about"></card>
+</div>
+
+<div class="uk-container uk-container-center">
+    <div uk-grid data-uk-grid-margi>
+        <div class="uk-width-1-2@m uk-width-1-1@s">
+            <card cardTitle="Aprender" cardLink="/learn/menu">What happens here?</card>
+        </div>
+        <div class="uk-width-1-2@m uk-width-1-1@s">
+            <card cardTitle="Exercicios" cardLink="/exercices/menu"></card>
+        </div>
+        <div class="uk-width-1-2@m  uk-visible@s">
+            <card cardTitle="Ajuda" cardLink="/help"></card>
+        </div>
+        <div class="uk-width-2-2@m uk-visible@s">
+            <card cardTitle="Sobre" cardLink="/about"></card>
+        </div>
+    </div>
 </div>

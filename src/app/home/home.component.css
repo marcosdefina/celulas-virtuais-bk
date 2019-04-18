@@ -2,58 +2,15 @@
     z-index: 10;
     position: absolute;
     left: 50%;
-    top: 65%;
+    top: 43vh;
     transform: translate(-50%, -50%);
+    top: 357px;
 }
 
 .card {
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-#learn {
-    z-index: 9;
-    display: inline-block;
-    position: absolute;
-    left: 48%;
-    top: 61%;
-    width: 255px;
-    height: 200px;
-    transform: translate(-100%, -100%);
-}
-
-#exercises {
-    z-index: 9;
-    display: inline-block;
-    position: absolute;
-    left: 52%;
-    top: 61%;
-    width: 255px;
-    height: 200px;
-    transform: translate(0%, -100%);
-}
-
-#help {
-    z-index: 9;
-    display: inline-block;
-    position: absolute;
-    left: 48%;
-    top: 65%;
-    width: 255px;
-    height: 200px;
-    transform: translate(-100%, -0%);
-}
-
-#about {
-    z-index: 9;
-    display: inline-block;
-    position: absolute;
-    left: 52%;
-    top: 65%;
-    width: 255px;
-    height: 200px;
-    transform: translate(0%, 0%);
 }
 
 .title {
@@ -63,7 +20,6 @@
     font-weight: bold;
     font-size: 30px;
     line-height: 39px;
-    text-align: center;
     letter-spacing: 0.1em;
     color: #1ABC9C;
     -webkit-text-stroke: 1px white;
@@ -79,4 +35,8 @@
     line-height: 25px;
     text-align: center;
     color: #4D4D4D;
+}
+
+:root{
+    --uk-breakpoint-s:768px;
 }
