@@ -32,5 +32,15 @@
   letter-spacing: 0.06em;
   padding: 0;
   color: #1ABC9C;
+
+  /*It was painful*/
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
   text-align: center;
 }
