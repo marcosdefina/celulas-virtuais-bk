@@ -1,41 +1,38 @@
-.button {
-  position: relative;
-  vertical-align: middle;
-  display: inline-block;
-  padding: 8px;
-  width: 45%
-}
-.button-cell {
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
+.centered-image {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 43vh;
+    transform: translate(-50%, -50%);
+    top: 357px;
 }
 
-.button-title {
-  position: relative;
-  text-align: center;
-  z-index: 1;
-  filter: alpha(opacity = 50);
-  opacity: 0.5;
+.card {
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.button-title:hover {
-  filter: alpha(opacity = 100);
-  opacity: 1;
-  cursor: pointer;
+.title {
+    text-align: center;
+    font-family: Luckiest Guy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: 0.1em;
+    color: #1ABC9C;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.center-gif {
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-  display: inline-block;
-  padding: 8px;
-  width: 100%
-}
-.bio-background {
-  background: #fff;
+.excerpt {
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #4D4D4D;
 }

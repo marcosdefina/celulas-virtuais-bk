@@ -1,57 +1,22 @@
-<div class="bio-background">
-  <div class="uk-child-width-1-2@m uk-grid-small uk-grid-match" uk-grid>
-    <div>
-      <div class="uk-card uk-card-default button">
-          <div class="uk-card-media-top button">
-              <img src="./assets/images/cell-icon2.png" alt="">
-          </div>
-          <div class="uk-card-body button">
-            <img class="uk-card-title button-title" src="assets/gifs/know.gif" routerLink="/learn-menu" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card uk-card-default button">
-          <div class="uk-card-media-top button">
-              <img src="./assets/images/cell-icon2.png" alt="">
-          </div>
-          <div class="uk-card-body button">
-            <img class="uk-card-title button-title" src="assets/gifs/test.gif" routerLink="/exercices-menu" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          </div>
-      </div>
-    </div>
-  </div>
+<img class="centered-image" src="/assets/images/microorganism.svg" />
 
-  <div id="button0" class="center-gif">
-    <div class="button-cell">
-      <img src="./assets/images/animal-cell-icon.png" />
+<div uk-grid data-uk-grid-margin>
+    <div class="title uk-width-1-1">SEJA BEM-VINDO(A)!</div>
+    <div class="excerpt uk-width-1-1">Vamos aprender mais sobre citologia?</div>
+</div>
+<div class="uk-container uk-container-center">
+    <div uk-grid data-uk-grid-margi>
+        <div class="uk-width-1-2@m uk-width-1-1@s">
+            <card cardTitle="Aprender" cardLink="/learn/menu">What happens here?</card>
+        </div>
+        <div class="uk-width-1-2@m uk-width-1-1@s">
+            <card cardTitle="Exercicios" cardLink="/exercices/menu"></card>
+        </div>
+        <div class="uk-width-1-2@m  uk-visible@s">
+            <card cardTitle="Ajuda" cardLink="/help"></card>
+        </div>
+        <div class="uk-width-1-2@m uk-visible@s">
+            <card cardTitle="Sobre" cardLink="/about"></card>
+        </div>
     </div>
-  </div>
-
-  <div class="uk-child-width-1-2@m uk-grid-small uk-grid-match" uk-grid>
-    <div>
-      <div class="uk-card uk-card-default button">
-          <div class="uk-card-media-top button">
-              <img src="./assets/images/cell-icon2.png" alt="">
-          </div>
-          <div class="uk-card-body button">
-            <img class="uk-card-title button-title" src="assets/gifs/sobre.gif" routerLink="/about" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card uk-card-default button">
-          <div class="uk-card-media-top button">
-              <img src="./assets/images/cell-icon2.png" alt="">
-          </div>
-          <div class="uk-card-body button">
-            <img class="uk-card-title button-title" src="assets/gifs/help.gif" routerLink="/help" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          </div>
-      </div>
-    </div>
-  </div>
 </div>
