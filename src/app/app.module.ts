@@ -11,6 +11,7 @@ import { ExercicesMenuComponent } from './exercices-menu/exercices-menu.componen
 import { Ex1Component } from './ex1/ex1.component';
 import { CardComponent } from './subcomponents/card/card.component';
 import { NavbarComponent } from './subcomponents/navbar/navbar.component';
+import { OffcanvasComponent } from './subcomponents/offcanvas/offcanvas.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NavbarComponent } from './subcomponents/navbar/navbar.component';
     Ex1Component,
     CardComponent,
     NavbarComponent,
+    OffcanvasComponent,
   ],
   imports: [
     BrowserModule,
