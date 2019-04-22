@@ -9,4 +9,5 @@ import { Component, Input } from "@angular/core";
 export class OffcanvasComponent {
     @Input() offcanvasContent: string;
     @Input() contentLink: string;
+    @Input() currentComponent: string;
 }
