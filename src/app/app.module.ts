@@ -12,6 +12,7 @@ import { Ex1Component } from './ex1/ex1.component';
 import { CardComponent } from './subcomponents/card/card.component';
 import { NavbarComponent } from './subcomponents/navbar/navbar.component';
 import { OffcanvasComponent } from './subcomponents/offcanvas/offcanvas.component';
+import { TitleTagComponent } from './subcomponents/title-tag/title-tag.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OffcanvasComponent } from './subcomponents/offcanvas/offcanvas.componen
     CardComponent,
     NavbarComponent,
     OffcanvasComponent,
+    TitleTagComponent,
   ],
   imports: [
     BrowserModule,
