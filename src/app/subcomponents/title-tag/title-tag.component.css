@@ -1,0 +1,27 @@
+.title {
+    text-align: center;
+    font-family: Luckiest Guy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: 0.1em;
+    color: #1ABC9C;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.litte-title {
+    font-size: 25px;
+}
+
+.excerpt {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #4D4D4D;
+}
