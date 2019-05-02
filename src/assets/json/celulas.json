@@ -1,0 +1,14 @@
+[{
+    "celula-animal": [{
+        "id": "0",
+        "nome": "Célula Animal",
+        "infos": [
+            "Apara"
+        ],
+        "organelas": [
+            "Aparalho de Golgi",
+            "Lisossomo",
+            "Ribossomo"
+        ]
+    }]
+}]

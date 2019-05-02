@@ -5,9 +5,9 @@
     <div uk-grid>
         <div class="uk-width-1-1 uk-margin-remove uk-padding-remove">
             <div class="uk-grid-match uk-grid-small uk-card">
-                <div uk-grid data-uk-grid-margin class="uk-width-1-1 uk-text-center uk-align-center ">
+                <div uk-grid data-uk-grid-margin class="uk-width-1-1 uk-text-center uk-align-center">
                     <img class="image-sizer uk-width-1-3" src="./assets/images/microorganism.svg " />
-                    <p class="cell-title uk-width-1-2 button-title">Célula Animal</p>
+                    <p routerLink="/learn/celulas-animais" routerLinkActive="router-link-active" class="cell-title uk-width-1-2 button-title">Célula Animal</p>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="uk-grid-match uk-grid-small uk-card">
                 <div uk-grid data-uk-grid-margin class="uk-width-1-1 uk-text-center uk-align-center ">
                     <img class="image-sizer uk-width-1-3 " src="./assets/images/microorganism.svg " />
-                    <p class="cell-title uk-width-1-2 button-title">Célula Vegetal</p>
+                    <p [routerLink]="['/learn/celulas-vegetais']" class="cell-title uk-width-1-2 button-title">Célula Vegetal</p>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="uk-grid-match uk-grid-small uk-card">
                 <div uk-grid data-uk-grid-margin class="uk-width-1-1 uk-text-center uk-align-center">
                     <img class="image-sizer uk-width-1-3" src="./assets/images/microorganism.svg " />
-                    <p class="cell-title uk-width-1-2 button-title">Célula Procariótica</p>
+                    <p [routerLink]="['/learn/celulas-procarioticas']" class="cell-title uk-width-1-2 button-title">Célula Procariótica</p>
                 </div>
             </div>
         </div>

@@ -13,6 +13,8 @@ import { CardComponent } from './subcomponents/card/card.component';
 import { NavbarComponent } from './subcomponents/navbar/navbar.component';
 import { OffcanvasComponent } from './subcomponents/offcanvas/offcanvas.component';
 import { TitleTagComponent } from './subcomponents/title-tag/title-tag.component';
+import { LearnCellComponent } from './learn-cell/learn-cell.component';
+import { CellComponent } from './cell/cell.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { TitleTagComponent } from './subcomponents/title-tag/title-tag.component
     NavbarComponent,
     OffcanvasComponent,
     TitleTagComponent,
+    LearnCellComponent,
+    CellComponent,
   ],
   imports: [
     BrowserModule,
