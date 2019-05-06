@@ -1,6 +1,6 @@
 export class Cell {
     id: number;
     name: string;
-    info: [];
+    infos: [];
     organels: [];
 }

@@ -8,7 +8,8 @@ import { CellService }  from '../cell.service'
 @Component({
     selector: 'app-learn-cell',
     templateUrl: './learn-cell.component.html',
-    styleUrls: ['./learn-cell.component.css']
+    styleUrls: ['./learn-cell.component.css'],
+    providers: [CellService]
 })
 
 export class LearnCellComponent implements OnInit {
@@ -23,11 +24,4 @@ export class LearnCellComponent implements OnInit {
 
     ngOnInit(): void {
     }
-
-    /*getCell(){
-        const id = +this.route.snapshot.paramMap.get('id');
-        console.log(this.cellService.getCell(id))
-        this.cellService.getCell(id).
-            subscribe(cell => this.cell = cell)
-    }*/
 }

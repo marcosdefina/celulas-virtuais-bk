@@ -6,6 +6,8 @@ import { HelpComponent } from './help/help.component';
 import { LearnMenuComponent } from './learn-menu/learn-menu.component';
 import { ExercicesMenuComponent } from './exercices-menu/exercices-menu.component';
 import { LearnCellComponent } from './learn-cell/learn-cell.component';
+import { CellService } from './cell.service';
+import { CellComponent } from './cell/cell.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,10 +16,12 @@ const routes: Routes = [
   { path: 'learn', component: LearnMenuComponent },
   { path: 'exercices', component: ExercicesMenuComponent },
   { path: 'learn/:id', component: LearnCellComponent },
+  { path: 'cell/:id', component: CellComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [CellService],
 })
 export class AppRoutingModule {}

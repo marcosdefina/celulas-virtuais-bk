@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CellService } from '../cell.service';
 
 @Component({
   selector: 'app-learn-menu',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearnMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private cellService: CellService,
+  ) { }
 
   ngOnInit() {
   }
