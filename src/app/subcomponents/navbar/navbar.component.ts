@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import {Location} from '@angular/common';
 
 @Component({
     selector: 'navbar',
@@ -7,6 +8,7 @@ import { Component, Input } from "@angular/core";
 })
 
 export class NavbarComponent {
+    constructor(private location: Location){}
     @Input() navbarContent: string;
     @Input() contentLink: string;
 }

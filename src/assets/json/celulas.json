@@ -10,5 +10,29 @@
             "Lisossomo",
             "Ribossomo"
         ]
+    },
+    "celula-vegetal": {
+        "id": "1",
+        "name": "Célula Vegetal",
+        "infos": [
+            "Apara"
+        ],
+        "organels": [
+            "Parede Celular",
+            "Lisossomo",
+            "Ribossomo"
+        ]
+    },
+    "celula-procariota": {
+        "id": "2",
+        "name": "Célula Procariota",
+        "infos": [
+            "Apara"
+        ],
+        "organels": [
+            "Aparalho de Golgi",
+            "Lisossomo",
+            "Ribossomo"
+        ]
     }
 }
