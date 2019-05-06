@@ -1,0 +1,8 @@
+.centered-image {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 30vh;
+    transform: translate(-50%, 0%);
+    height: 70%;
+}
