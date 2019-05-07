@@ -7,9 +7,9 @@ import { Component, Input } from "@angular/core";
 })
 
 export class ModalComponent {
+    @Input() modalId: string;
     @Input() modalTitle: string;
     @Input() modalExcerpt: string;
     @Input() modalImageUrl: string;
     @Input() modalInfos: [];
-    //modalImageUrl = 'assets/images/nucleo.svg'
 }

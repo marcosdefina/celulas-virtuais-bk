@@ -1,17 +1,13 @@
 <title-tag title="{{this.cell.name}}" excerpt="Clique sobre as organleas para aprender mais.">
 </title-tag>
 
-<img  href="#modal-overflow" uk-toggle class="centered-image" src="./assets/images/microorganism.svg" />
-<modal  modalTitle="Teste" 
-        modalExcerpt="Testing it"
-        modalImageUrl="/assets/images/nucleo.svg"
-        [modalInfos]="[
-            '1 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.',
-            '2 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.',
-            '3 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.',
-            '4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.',
-            '5 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.'
-        ]"
-        
-    >
-</modal>
+<img  href="#nucleo" uk-toggle class="centered-image" src="./assets/images/microorganism.svg" />
+
+<div *ngFor="let organel of this.cell.organels">
+    <modal  modalId="{{organel.id}}"
+            modalTitle="{{organel.name}}"
+            modalImageUrl="{{organel.imageUrl}}"
+            modalInfos="{{organel.infos}}"
+        >
+    </modal>
+</div>

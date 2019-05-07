@@ -3,12 +3,38 @@
         "id": "0",
         "name": "Célula Animal",
         "infos": [
-            "Apara"
+            "Presente em animais.",
+            "Eu acho.",
+            "Colocar outras informações aqui."
         ],
         "organels": [
-            "Aparalho de Golgi",
-            "Lisossomo",
-            "Ribossomo"
+            {   "id": "nucleo",
+                "name": "Núcleo",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Estrutura esférica onde se encontra o DNA.",
+                    "Outra característica imporatante sobre o núcleo.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "membrana-plasmatica",
+                "name": "Membrana Plasmática",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
+                    "Outra característica imporatante sobre a membrana plasmática.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "peroxissomos",
+                "name": "Peroxissomos",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Estrutura arredondada responsável pelo armazenamento de enzimas.",
+                    "Outra característica imporatante sobre o peroxissomos.",
+                    "Colocar mais informações aqui."
+                ]
+            }
         ]
     },
     "celula-vegetal": {
