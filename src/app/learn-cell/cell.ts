@@ -2,5 +2,12 @@ export class Cell {
     id: number;
     name: string;
     infos: [];
-    organels: [];
+    organels: [
+        {
+            "id": string,
+            "name": string,
+            "imageUrl": string,
+            "infos": []
+        }
+    ];
 }

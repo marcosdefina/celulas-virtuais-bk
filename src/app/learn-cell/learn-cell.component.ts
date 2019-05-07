@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Cell }         from './cell';
 import { CellService }  from '../cell.service'
+import { stringify } from 'querystring';
 
 @Component({
     selector: 'app-learn-cell',
@@ -45,6 +46,18 @@ export class LearnCellComponent implements OnInit {
     }
   
     defaultCell(){
-      this.cell = {'id':0,'infos':[],'name':'default-cell','organels':[]}
+      this.cell = {
+        'id':0,
+        'infos':[],
+        'name':'default-cell',
+        'organels':[
+          {
+            "id": "",
+            "name": "",
+            "imageUrl": "",
+            "infos":[]
+          }
+        ]
+      }
     }
 }
