@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href 'https://eic-usp.github.io/celulas-virtuais/'" 
+    "deploy": "ng build --prod --base-href 'https://eic-usp.github.io/celulas-virtuais/'"
   },
   "private": true,
   "dependencies": {

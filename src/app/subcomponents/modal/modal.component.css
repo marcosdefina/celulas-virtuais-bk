@@ -1,0 +1,9 @@
+.title-positioning{
+    margin:8px;
+}
+
+.centered-image img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

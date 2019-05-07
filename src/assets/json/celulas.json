@@ -1,0 +1,116 @@
+{
+    "celula-animal": {
+        "id": "0",
+        "name": "Célula Animal",
+        "infos": [
+            "Presente em animais.",
+            "Eu acho.",
+            "Colocar outras informações aqui."
+        ],
+        "organels": [
+            {   "id": "nucleo",
+                "name": "Núcleo",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Estrutura esférica onde se encontra o DNA.",
+                    "Outra característica imporatante sobre o núcleo.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "membrana-plasmatica",
+                "name": "Membrana Plasmática",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
+                    "Outra característica imporatante sobre a membrana plasmática.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "peroxissomos",
+                "name": "Peroxissomos",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Estrutura arredondada responsável pelo armazenamento de enzimas.",
+                    "Outra característica imporatante sobre o peroxissomos.",
+                    "Colocar mais informações aqui."
+                ]
+            }
+        ]
+    },
+    "celula-vegetal": {
+        "id": "1",
+        "name": "Célula Vegetal",
+        "infos": [
+            "Presente em animais.",
+            "Eu acho.",
+            "Colocar outras informações aqui."
+        ],
+        "organels": [
+            {   "id": "parede-celular",
+                "name": "Parede Celular",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Estrutura esférica onde se encontra o DNA.",
+                    "Outra característica imporatante sobre o núcleo.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "membrana-plasmatica",
+                "name": "Membrana Plasmática",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
+                    "Outra característica imporatante sobre a membrana plasmática.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "peroxissomos",
+                "name": "Peroxissomos",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Estrutura arredondada responsável pelo armazenamento de enzimas.",
+                    "Outra característica imporatante sobre o peroxissomos.",
+                    "Colocar mais informações aqui."
+                ]
+            }
+        ]
+    },
+    "celula-procariota": {
+        "id": "2",
+        "name": "Célula Procariota",
+        "infos": [
+            "Presente em animais.",
+            "Eu acho.",
+            "Colocar outras informações aqui."
+        ],
+        "organels": [
+            {   "id": "flagelo",
+                "name": "Flagelo",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Ajuda na locomoção da célula.",
+                    "Outra característica imporatante sobre o núcleo.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "membrana-plasmatica",
+                "name": "Membrana Plasmática",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
+                    "Outra característica imporatante sobre a membrana plasmática.",
+                    "Colocar mais informações aqui."
+                ]
+            },
+            {   "id": "peroxissomos",
+                "name": "Peroxissomos",
+                "imageUrl": "assets/images/nucleo.svg",
+                "infos": [
+                    "Estrutura arredondada responsável pelo armazenamento de enzimas.",
+                    "Outra característica imporatante sobre o peroxissomos.",
+                    "Colocar mais informações aqui."
+                ]
+            }
+        ]
+    }
+}

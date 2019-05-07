@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,8 @@ import { CardComponent } from './subcomponents/card/card.component';
 import { NavbarComponent } from './subcomponents/navbar/navbar.component';
 import { OffcanvasComponent } from './subcomponents/offcanvas/offcanvas.component';
 import { TitleTagComponent } from './subcomponents/title-tag/title-tag.component';
+import { LearnCellComponent } from './learn-cell/learn-cell.component';
+import { ModalComponent } from './subcomponents/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,13 @@ import { TitleTagComponent } from './subcomponents/title-tag/title-tag.component
     NavbarComponent,
     OffcanvasComponent,
     TitleTagComponent,
+    LearnCellComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
