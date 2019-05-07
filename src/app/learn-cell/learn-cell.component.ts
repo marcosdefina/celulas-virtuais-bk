@@ -38,7 +38,6 @@ export class LearnCellComponent implements OnInit {
             infos: data[this.id].infos,
             organels: data[this.id].organels,        
           };
-          console.log(this.cell)
           //this will be replaced by an array of ids, linking each piece of the cell-image
           //to its respective modal
           this.treatedId = "#"+this.cell.organels[0].id;
