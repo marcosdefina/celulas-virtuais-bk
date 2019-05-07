@@ -8,7 +8,7 @@ import {Location} from '@angular/common';
 })
 
 export class NavbarComponent {
-    constructor(private location: Location){}
+    constructor(public location: Location){}
     @Input() navbarContent: string;
     @Input() contentLink: string;
 }

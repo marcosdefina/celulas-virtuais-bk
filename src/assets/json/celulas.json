@@ -10,7 +10,7 @@
         "organels": [
             {   "id": "nucleo",
                 "name": "Núcleo",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura esférica onde se encontra o DNA.",
                     "Outra característica imporatante sobre o núcleo.",
@@ -19,7 +19,7 @@
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
                     "Outra característica imporatante sobre a membrana plasmática.",
@@ -28,7 +28,7 @@
             },
             {   "id": "peroxissomos",
                 "name": "Peroxissomos",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
                     "Outra característica imporatante sobre o peroxissomos.",
@@ -48,7 +48,7 @@
         "organels": [
             {   "id": "parede-celular",
                 "name": "Parede Celular",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura esférica onde se encontra o DNA.",
                     "Outra característica imporatante sobre o núcleo.",
@@ -57,7 +57,7 @@
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
                     "Outra característica imporatante sobre a membrana plasmática.",
@@ -66,7 +66,7 @@
             },
             {   "id": "peroxissomos",
                 "name": "Peroxissomos",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
                     "Outra característica imporatante sobre o peroxissomos.",
@@ -86,7 +86,7 @@
         "organels": [
             {   "id": "flagelo",
                 "name": "Flagelo",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Ajuda na locomoção da célula.",
                     "Outra característica imporatante sobre o núcleo.",
@@ -95,7 +95,7 @@
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
                     "Outra característica imporatante sobre a membrana plasmática.",
@@ -104,7 +104,7 @@
             },
             {   "id": "peroxissomos",
                 "name": "Peroxissomos",
-                "imageUrl": "assets/images/nucleo.svg",
+                "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
                     "Outra característica imporatante sobre o peroxissomos.",
