@@ -1,7 +1,8 @@
 <title-tag title="{{this.cell.name}}" excerpt="Clique sobre as organleas para aprender mais.">
 </title-tag>
 
-<img  href="#nucleo" uk-toggle class="centered-image" src="./assets/images/microorganism.svg" />
+<!-- Aqui será mapeada as organelas da célula de maneira q o href tenha o id de cada organela -->
+<img uk-toggle [attr.href]='this.treatedId' class="centered-image" src="./assets/images/microorganism.svg" />
 
 <div *ngFor="let organel of this.cell.organels">
     <modal  modalId="{{organel.id}}"
