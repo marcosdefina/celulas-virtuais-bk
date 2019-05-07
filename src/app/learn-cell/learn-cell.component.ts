@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 
-
-import { Cell }         from '../cell/cell';
+import { Cell }         from './cell';
 import { CellService }  from '../cell.service'
 
 @Component({
