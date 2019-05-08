@@ -13,17 +13,17 @@
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura esférica onde se encontra o DNA.",
-                    "Outra característica imporatante sobre o núcleo.",
-                    "Colocar mais informações aqui."
+                    "É composto por uma estrutura complexa, que desempenha funções de extrema importância na célula.",
+                    "Grande parte das atividades das células é controlada pelos genes, que estão localizados no núcleo celular."
                 ]
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
-                    "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
-                    "Outra característica imporatante sobre a membrana plasmática.",
-                    "Colocar mais informações aqui."
+                    "Estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
+                    "responsável pela manutenção de uma substância do meio intracelular.",
+                    "Por ser o componente celular mais externo e possuir receptores específicos, a membrana tem a capacidade de reconhecer outras células e diversos tipos de moléculas, como hormônios."
                 ]
             },
             {   "id": "peroxissomos",
@@ -31,7 +31,7 @@
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
-                    "Outra característica imporatante sobre o peroxissomos.",
+                    "Outra característica importante sobre o peroxissomos.",
                     "Colocar mais informações aqui."
                 ]
             }
@@ -51,7 +51,7 @@
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura esférica onde se encontra o DNA.",
-                    "Outra característica imporatante sobre o núcleo.",
+                    "Outra característica importante sobre o núcleo.",
                     "Colocar mais informações aqui."
                 ]
             },
@@ -59,8 +59,8 @@
                 "name": "Membrana Plasmática",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
-                    "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
-                    "Outra característica imporatante sobre a membrana plasmática.",
+                    "Estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
+                    "Outra característica importante sobre a membrana plasmática.",
                     "Colocar mais informações aqui."
                 ]
             },
@@ -69,7 +69,7 @@
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
-                    "Outra característica imporatante sobre o peroxissomos.",
+                    "Outra característica importante sobre o peroxissomos.",
                     "Colocar mais informações aqui."
                 ]
             }
@@ -79,9 +79,9 @@
         "id": "2",
         "name": "Célula Procariota",
         "infos": [
-            "Presente em animais.",
-            "Eu acho.",
-            "Colocar outras informações aqui."
+            "São as células mais primitivas",
+            "Eles não possuem um núcleo definido.",
+            "Não contém núcleo e outras organelas ligadas à membrana."
         ],
         "organels": [
             {   "id": "flagelo",
@@ -89,16 +89,16 @@
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Ajuda na locomoção da célula.",
-                    "Outra característica imporatante sobre o núcleo.",
-                    "Colocar mais informações aqui."
+                    "Nas bactérias, organismos procariontes, são formados apenas por uma proteína chamada de flagelina, que se dispõe em cadeias.",
+                    "Uma célula flagelada apresenta geralmente apenas um flagelo, entretanto, ele pode ocorrer em maior quantidade. "
                 ]
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
-                    "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
-                    "Outra característica imporatante sobre a membrana plasmática.",
+                    "Estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
+                    "Outra característica importante sobre a membrana plasmática.",
                     "Colocar mais informações aqui."
                 ]
             },
@@ -107,7 +107,7 @@
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
-                    "Outra característica imporatante sobre o peroxissomos.",
+                    "Outra característica importante sobre o peroxissomos.",
                     "Colocar mais informações aqui."
                 ]
             }

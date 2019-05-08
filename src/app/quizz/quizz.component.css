@@ -1,0 +1,52 @@
+.centered-image {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 30vh;
+    transform: translate(-50%, 0%);
+    height: 70%;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.centered-image:hover{
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.centered-image {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 43vh;
+    transform: translate(-50%, -50%);
+    top: 420px;
+}
+
+.card {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.red-button {
+    padding: 20px;
+}
+
+.rounding-it {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.uk-container-center .uk-width-1-1 {
+    margin-bottom: 25px;
+}
+
+.uk-button-danger {
+    background: red;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+

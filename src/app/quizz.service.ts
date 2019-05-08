@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Cell } from './learn-cell/cell';
+import { Quizz } from './quizz/quizz';
 
 @Injectable({ providedIn: 'root' })
-export class CellService {
-  json: Cell;
+export class QuizzService {
+  json: Quizz;
 
   constructor(
     private http: HttpClient,

@@ -1,0 +1,33 @@
+<img class="centered-image" src="./assets/images/microorganism.svg" />
+
+<title-tag title="SEJA BEM-VINDO(A)!" excerpt="Vamos aprender mais sobre citologia?">
+</title-tag>
+
+<div class="uk-container uk-container-center">
+    <div uk-grid data-uk-grid-margin>
+        <div class="uk-width-1-1">
+            <card cardTitle="Aprender" cardLink="/learn">What happens here?</card>
+        </div>
+        <div class="uk-width-1-1">
+            <card cardTitle="Exercicios" cardLink="/exercices"></card>
+        </div>
+    </div>
+</div>
+<div class="red-button uk-margin-remove uk-align-right uk-position-bottom-right">
+    <button class="uk-button-danger rounding-it"><span class="uk-margin-auto" uk-icon="icon: social"></span></button>
+</div>
+
+
+<title-tag title="{{this.quizz.description}}" excerpt="Clique sobre as caixas de perguntas para determinar sua respostas.">
+</title-tag>
+
+<!-- Aqui será mapeada os quizzes de maneira q o href tenha o id de cada organela -->
+<img uk-toggle [attr.href]='this.treatedId' class="centered-image" src="./assets/images/microorganism.svg" />
+
+<div *ngFor="let exercise of this.quizz.exercises">
+    <modal  modalId="{{exercise.id}}"
+        >
+    </modal>
+</div>
+
+

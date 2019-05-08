@@ -1,0 +1,15 @@
+{
+    "exercicioUm": {
+        "id": "0",
+        "description": "Célula Animal",
+        "infos": [
+            "Em teste",
+            "Testando",
+            "Colocar outras informações aqui."
+        ],
+        "exercises": [
+            {   "id": "ex1",
+                "text": "texto de teste",
+            }
+        ]
+    }

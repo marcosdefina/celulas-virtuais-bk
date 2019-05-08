@@ -25,10 +25,9 @@ export class LearnCellComponent implements OnInit {
       this.id = this.route.snapshot.paramMap.get('id');
       this.defaultCell();
       this.showCell();
-
     }
 
-    showCell(){
+    showCell() {
       this.cellService.callTest('http://localhost:4200/assets/json/celulas.json')
         .subscribe((data: Cell) => {
           this.cell = {

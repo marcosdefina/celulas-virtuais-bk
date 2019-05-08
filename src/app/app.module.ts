@@ -16,6 +16,7 @@ import { OffcanvasComponent } from './subcomponents/offcanvas/offcanvas.componen
 import { TitleTagComponent } from './subcomponents/title-tag/title-tag.component';
 import { LearnCellComponent } from './learn-cell/learn-cell.component';
 import { ModalComponent } from './subcomponents/modal/modal.component';
+import { QuizzComponent } from './quizz/quizz.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ModalComponent } from './subcomponents/modal/modal.component';
     TitleTagComponent,
     LearnCellComponent,
     ModalComponent,
+    QuizzComponent,
   ],
   imports: [
     BrowserModule,
