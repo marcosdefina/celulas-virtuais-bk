@@ -4,10 +4,10 @@ export class Cell {
     infos: [];
     organels: [
         {
-            "id": string,
-            "name": string,
-            "imageUrl": string,
-            "infos": []
+            id: string,
+            name: string,
+            imageUrl: string,
+            infos: []
         }
     ];
 }
