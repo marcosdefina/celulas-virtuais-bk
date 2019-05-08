@@ -25,3 +25,7 @@
     text-align: center;
     color: #4D4D4D;
 }
+div + div{
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
