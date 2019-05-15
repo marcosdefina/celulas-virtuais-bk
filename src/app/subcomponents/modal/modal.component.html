@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <img class="uk-margin-remove uk-position-bottom-right" src="./assets/images/mute.svg">
-            <audio class="uk-align-center">
+            <img (click)="this.playSound(this.modalAudio)" class="audio-button uk-margin-remove uk-position-bottom-right" src="./assets/images/mute.svg">
+            <audio id="aud" class="uk-align-center">
                 <source src="{{modalAudio}}" type="audio/mpeg">
             </audio>
         </div>
