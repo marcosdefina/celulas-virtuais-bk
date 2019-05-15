@@ -1,14 +1,15 @@
-<title-tag title="{{this.cell.name}}" excerpt="Clique sobre as organleas para aprender mais.">
+<title-tag title="{{this.cell.name}}" excerpt="Clique sobre as organelas para aprender mais.">
 </title-tag>
 
 <!-- Aqui será mapeada as organelas da célula de maneira q o href tenha o id de cada organela -->
-<img uk-toggle [attr.href]='this.treatedId' class="centered-image" src="./assets/images/microorganism.svg" />
+<img uk-toggle [attr.href]='this.treatedId' class="center-image uk-align-center uk-width-1-1 uk-margin-remove" style="max-height: 70vh" src="./assets/images/microorganism.svg" />
 
 <div *ngFor="let organel of this.cell.organels">
-    <modal  modalId="{{organel.id}}"
-            modalTitle="{{organel.name}}"
-            modalImageUrl="{{organel.imageUrl}}"
-            [modalInfos]="organel.infos"
-        >
+    <modal modalId="{{organel.id}}" modalTitle="{{organel.name}}" modalImageUrl="{{organel.imageUrl}}"
+        [modalInfos]="organel.infos" modalAudio="{{organel.audio}}">
     </modal>
 </div>
+
+<audio controls autoplay class="uk-align-center">
+    <source src="./assets/sounds/treina1.wav" type="audio/mpeg">
+</audio>

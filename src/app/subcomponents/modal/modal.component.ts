@@ -12,4 +12,5 @@ export class ModalComponent {
     @Input() modalExcerpt: string;
     @Input() modalImageUrl: string;
     @Input() modalInfos: [];
+    @Input() modalAudio: string;
 }
