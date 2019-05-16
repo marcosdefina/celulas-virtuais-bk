@@ -23,5 +23,6 @@ export class ModalComponent {
             this.audioInfo = sound
         } else
             this.audioInfo.pause()
+            //TODO: Find out why pause is not working.
     }
 }
