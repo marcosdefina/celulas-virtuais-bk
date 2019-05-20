@@ -18,7 +18,14 @@
                 </div>
             </div>
 
-            <img (click)="this.playSound(this.modalAudio)" class="audio-button uk-margin-remove uk-position-bottom-right" src="./assets/images/mute.svg">
+            <!--Unmute Google icon-->
+            <div (click)="this.playSound(this.modalAudio)" class="fixed-action-btn">
+                <a class="btn-floating btn-large yellow">
+                    <i class="material-icons">
+                        volume_up
+                    </i>
+                </a>
+            </div>
             <audio id="aud" class="uk-align-center">
                 <source src="{{modalAudio}}" type="audio/mpeg">
             </audio>
