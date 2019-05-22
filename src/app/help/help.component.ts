@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import M from 'materialize-css';
 
 @Component({
   selector: 'app-help',
@@ -10,6 +11,11 @@ export class HelpComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.fixed-action-btn');
+      var instances = M.FloatingActionButton.init(elems, Option);
+    });
+  }   
+
 
 }
