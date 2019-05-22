@@ -2,6 +2,7 @@
     "celula-animal": {
         "id": "0",
         "name": "Célula Animal",
+        "audio": "./assets/sounds/treina1.wav",
         "infos": [
             "Presente em animais.",
             "Eu acho.",
@@ -10,6 +11,7 @@
         "organels": [
             {   "id": "nucleo",
                 "name": "Núcleo",
+                "audio": "./assets/sounds/nucleo.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura esférica onde se encontra o DNA.",
@@ -19,6 +21,7 @@
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
+                "audio": "./assets/sounds/mp.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
@@ -28,6 +31,7 @@
             },
             {   "id": "peroxissomos",
                 "name": "Peroxissomos",
+                "audio": "./assets/sounds/perox.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
@@ -40,6 +44,7 @@
     "celula-vegetal": {
         "id": "1",
         "name": "Célula Vegetal",
+        "audio": "./assets/sounds/treinav0.wav",
         "infos": [
             "Presente em animais.",
             "Eu acho.",
@@ -48,6 +53,7 @@
         "organels": [
             {   "id": "parede-celular",
                 "name": "Parede Celular",
+                "audio": "./assets/sounds/pveg.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura esférica onde se encontra o DNA.",
@@ -57,6 +63,7 @@
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
+                "audio": "./assets/sounds/mp.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
@@ -66,6 +73,7 @@
             },
             {   "id": "peroxissomos",
                 "name": "Peroxissomos",
+                "audio": "./assets/sounds/perox.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
@@ -78,6 +86,7 @@
     "celula-procariota": {
         "id": "2",
         "name": "Célula Procariota",
+        "audio": "./assets/sounds/terinab0.wav",
         "infos": [
             "Presente em animais.",
             "Eu acho.",
@@ -86,6 +95,7 @@
         "organels": [
             {   "id": "flagelo",
                 "name": "Flagelo",
+                "audio": "./assets/sounds/flag.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Ajuda na locomoção da célula.",
@@ -95,6 +105,7 @@
             },
             {   "id": "membrana-plasmatica",
                 "name": "Membrana Plasmática",
+                "audio": "./assets/sounds/mp.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "estrutura celular fina que delimita a célula sendo responsável pela saída e entrada de sustâncias. Assim, ela tem a função de proteger as estruturas celulares internas.",
@@ -104,6 +115,7 @@
             },
             {   "id": "peroxissomos",
                 "name": "Peroxissomos",
+                "audio": "./assets/sounds/perox.wav",
                 "imageUrl": "./assets/images/nucleo.svg",
                 "infos": [
                     "Estrutura arredondada responsável pelo armazenamento de enzimas.",
