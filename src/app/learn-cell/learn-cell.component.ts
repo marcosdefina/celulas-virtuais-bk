@@ -17,6 +17,7 @@ export class LearnCellComponent implements OnInit {
     cell: Cell;
     id: string;
     treatedId: string;
+    detailed: boolean;
   
     constructor(
       private cellService: CellService,
@@ -27,7 +28,12 @@ export class LearnCellComponent implements OnInit {
       this.id = this.route.snapshot.paramMap.get('id');
       this.defaultCell();    
       this.showCell();
-      
+      this.detailed = false;
+    }
+
+    toggleImage(){
+      this.detailed = !this.detailed;
+      console.log(this.detailed)
     }
   
     showCell(){
