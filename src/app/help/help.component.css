@@ -14,12 +14,17 @@
 }
 
 .container {
-    width: 158px;
+    width: 170px;
     height: 40px;
     margin: 0;
     margin-left: 6px;
 }
 
-.fixed-action-btn{
-    left: 0; 
+.fixed-action-btn {
+    left: 0;
+    padding-left: 8px;
+}
+
+.overflow-button {
+    padding-left: 12px;
 }
