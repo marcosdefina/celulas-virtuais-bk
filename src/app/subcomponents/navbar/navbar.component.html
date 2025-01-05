@@ -1,13 +1,17 @@
 <nav class="uk-navbar uk-navbar-container uk-margin custom-background-color" style="max-height:63px">
     <div class="uk-navbar-left">
         <div class="uk-navbar-toggle">
-            <img src="./assets/icons/back.svg" (click)="this.location.back();" style="cursor:pointer;">
+            <i class="material-icons" (click)="this.location.back();" style="cursor:pointer;">
+                arrow_back
+            </i>
             <span class="uk-margin-small-left">{{navbarContent}}</span>
         </div>
     </div>
     <div class="uk-navbar-right">
         <a class="uk-navbar-toggle" href="#">
-            <span uk-navbar-toggle-icon type="button" uk-toggle="target: #offcanvas-nav"></span> <span class="uk-margin-small-left"></span>
+            <i class="material-icons" uk-toggle="target: #offcanvas-nav">
+                menu
+            </i>
         </a>
     </div>
 

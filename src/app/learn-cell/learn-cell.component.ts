@@ -31,7 +31,10 @@ export class LearnCellComponent implements OnInit {
     }
   
     showCell(){
-      this.cellService.callTest('http://localhost:4200/assets/json/celulas.json')
+      //USE url0 in deployed version
+      var url0 = window.location.hostname + '/assets/json/celulas.json'
+      var url1 = 'http://localhost:4200/assets/json/celulas.json'
+      this.cellService.callTest(url1)
         .subscribe((data: Cell) => {
           this.cell = {
             id: data[this.id].id,
